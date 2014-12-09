@@ -1,0 +1,3 @@
+attack  1-30
+walk   32-48
+idle 50-80 meron sa maya pero ayaw masama pag ineexport ko.

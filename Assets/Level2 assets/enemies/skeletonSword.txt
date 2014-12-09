@@ -1,0 +1,6 @@
+walk  1-17 or 1-16
+idle 19-48
+hurt 50-70
+dead 72-80
+attack 1  82-100
+attack 2 102-140
