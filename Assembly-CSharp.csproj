@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{5D081BC3-1382-C81E-B839-A5E8098E06FD}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_64;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Free Assets Download\52SpecialEffectPack\LegacyEffectEditor\csLegacyEffectChanger.cs" />
+     <Compile Include="Assets\Free Assets Download\52SpecialEffectPack\LegacyEffectEditor\csLegacyEffectEditor.cs" />
+     <Compile Include="Assets\Free Assets Download\Elementals\Scripts\OrbitCamera.cs" />
+     <Compile Include="Assets\Free Assets Download\Elementals\Scripts\TestParticles.cs" />
+     <Compile Include="Assets\Free Assets Download\Mecanim Warrior Anim Free\Script\PlayGUI.cs" />
+     <Compile Include="Assets\Free Assets Download\MoveForward.cs" />
+     <Compile Include="Assets\Free Assets Download\XWeaponTrail\Scripts\Spline.cs" />
+     <Compile Include="Assets\Free Assets Download\XWeaponTrail\Scripts\SplineControlPoint.cs" />
+     <Compile Include="Assets\Free Assets Download\XWeaponTrail\Scripts\VertexPool.cs" />
+     <Compile Include="Assets\Free Assets Download\XWeaponTrail\Scripts\XWeaponTrail.cs" />
+     <Compile Include="Assets\Free Assets Download\XWeaponTrail\Scripts\XWeaponTrailDemo.cs" />
+     <Compile Include="Assets\Inventory System\Item.cs" />
+     <Compile Include="Assets\Inventory System\ItemDatabase.cs" />
+     <Compile Include="Assets\Inventory System\Manager.cs" />
+     <Compile Include="Assets\Inventory System\Pages.cs" />
+     <Compile Include="Assets\Inventory System\Slots.cs" />
+     <Compile Include="Assets\Inventory System\TextScripts.cs" />
+     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\CharacterManager.cs" />
+     <Compile Include="Assets\Scripts\Chest_Open.cs" />
+     <Compile Include="Assets\Scripts\CircularMovement.cs" />
+     <Compile Include="Assets\Scripts\DoneSceneFadeInOut.cs" />
+     <Compile Include="Assets\Scripts\Dwarf_Earth.cs" />
+     <Compile Include="Assets\Scripts\Dwarf_Fire.cs" />
+     <Compile Include="Assets\Scripts\Dwarf_Water.cs" />
+     <Compile Include="Assets\Scripts\EnemyChar.cs" />
+     <Compile Include="Assets\Scripts\EnemyImage.cs" />
+     <Compile Include="Assets\Scripts\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Exp.cs" />
+     <Compile Include="Assets\Scripts\Experience.cs" />
+     <Compile Include="Assets\Scripts\FallOff.cs" />
+     <Compile Include="Assets\Scripts\FighterSkill1.cs" />
+     <Compile Include="Assets\Scripts\FighterSkill2.cs" />
+     <Compile Include="Assets\Scripts\Fighter_Skill3ParticleDestroy.cs" />
+     <Compile Include="Assets\Scripts\Fighter_Skill3_Particle_Destroyer.cs" />
+     <Compile Include="Assets\Scripts\Fighter_skill2ParticleDestroyer.cs" />
+     <Compile Include="Assets\Scripts\GolemParticleDestroyer.cs" />
+     <Compile Include="Assets\Scripts\KnightSkill2.cs" />
+     <Compile Include="Assets\Scripts\KnightSkill3.cs" />
+     <Compile Include="Assets\Scripts\Knight_skill2ParticleDestroyer.cs" />
+     <Compile Include="Assets\Scripts\LeaderImage.cs" />
+     <Compile Include="Assets\Scripts\Level1BossBattleStage.cs" />
+     <Compile Include="Assets\Scripts\MageNormalAttack.cs" />
+     <Compile Include="Assets\Scripts\MageSkill1.cs" />
+     <Compile Include="Assets\Scripts\Mage_HealPartyParticleDestroyer.cs" />
+     <Compile Include="Assets\Scripts\MainMenuSelector.cs" />
+     <Compile Include="Assets\Scripts\Movements.cs" />
+     <Compile Include="Assets\Scripts\MudGolem1.cs" />
+     <Compile Include="Assets\Scripts\MudGolem2.cs" />
+     <Compile Include="Assets\Scripts\MudGolem3.cs" />
+     <Compile Include="Assets\Scripts\MudGolemSpawner.cs" />
+     <Compile Include="Assets\Scripts\Mushroom.cs" />
+     <Compile Include="Assets\Scripts\Mushroom2.cs" />
+     <Compile Include="Assets\Scripts\PathBoss.cs" />
+     <Compile Include="Assets\Scripts\Platform.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\PlayerMana.cs" />
+     <Compile Include="Assets\Scripts\QuestCanvas.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\StatCanvas.cs" />
+     <Compile Include="Assets\Scripts\StatManager.cs" />
+     <Compile Include="Assets\Scripts\Torch.cs" />
+     <Compile Include="Assets\Scripts\TorchManager.cs" />
+     <Compile Include="Assets\Scripts\Tutorial_DummyScript.cs" />
+     <Compile Include="Assets\Scripts\UI Manager.cs" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Free Assets Download\00_KY_FX pack2\prefab\01_shot\00_ReadMe.txt" />
+     <None Include="Assets\Level2 assets\enemies\skeletonArcher.txt" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Free Assets Download\00_KY_FX pack2\ReadMe.txt" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Free Assets Download\KY_magicEffectsFree\ReadMe.txt" />
+     <None Include="Assets\Free Assets Download\XWeaponTrail\readme_english.txt" />
+     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Free Assets Download\Elementals\!Readme.txt" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Free Assets Download\XWeaponTrail\Model\readme.txt" />
+     <None Include="Assets\Free Assets Download\XWeaponTrail\readme_chinese.txt" />
+     <None Include="Assets\Level2 assets\enemies\skeletonSword.txt" />
+     <None Include="Assets\Treasurechest\Read me\readme.txt" />
+     <None Include="Assets\Free Assets Download\XWeaponTrail\Shader\xft_displacement_screen.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{0F8A7432-7A88-CFCF-175D-1795EABB2079}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{E9672B42-7706-4197-0239-AF4A822AD952}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

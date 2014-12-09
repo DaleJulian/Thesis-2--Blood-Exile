@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Mushroom2.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerHealth.cs" Line="38" Column="12" />
+      <File FileName="Assets\Scripts\Movements.cs" Line="250" Column="70" />
+      <File FileName="Assets\Scripts\StatManager.cs" Line="11" Column="8" />
+      <File FileName="Assets\Scripts\PlayerHealth.cs" Line="115" Column="3" />
+      <File FileName="Assets\Scripts\StatCanvas.cs" Line="24" Column="3" />
+      <File FileName="Assets\Scripts\CharacterManager.cs" Line="42" Column="1" />
+      <File FileName="Assets\Inventory System\Manager.cs" Line="242" Column="1" />
+      <File FileName="Assets\Scripts\Torch.cs" Line="8" Column="11" />
+      <File FileName="Assets\Scripts\Mushroom.cs" Line="54" Column="4" />
+      <File FileName="Assets\Scripts\Mushroom2.cs" Line="26" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

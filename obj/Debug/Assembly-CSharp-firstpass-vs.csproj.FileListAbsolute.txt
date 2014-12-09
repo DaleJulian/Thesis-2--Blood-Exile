@@ -1,0 +1,13 @@
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\Assembly-CSharp-firstpass.dll.CodeAnalysisLog.xml
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\Assembly-CSharp-firstpass.dll.lastcodeanalysissucceeded
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Dale\Desktop\CAPSTONE 2\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Dale\Desktop\CAPSTONE 2\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+C:\Users\Dale\Desktop\CAPSTONE 2\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Dale\Desktop\CAPSTONE 2\obj\Debug\Assembly-CSharp-firstpass.pdb
