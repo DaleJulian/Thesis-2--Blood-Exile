@@ -39,8 +39,8 @@ public class Movements : MonoBehaviour
 	public GameObject enemyTarget;
 	
 	public Manager inventoryManager;
-
-    public bool canMove;
+	
+	public bool canMove;
 	
 	#region Tutorials
 	public bool isTutorial;
@@ -162,7 +162,7 @@ public class Movements : MonoBehaviour
 		if (characterClass == CharacterClass.Mage)
 		{
 			Mage_AlleviateHealParticle.GetComponent<ParticleSystem>().Stop();
-
+			
 			Mage_OutburstParticle.GetComponent<ParticleSystem>().Stop();
 		}
 		
@@ -257,19 +257,19 @@ public class Movements : MonoBehaviour
 			isLeader = false;
 		else isLeader = true;
 		
-        if (dead == false)
-        {
-            if (canMove)
-            {
-                Movement();
-                Skills();
-            }
-        }
-
-        else
-        {
-            navmesh.enabled = false;
-        }
+		if (dead == false)
+		{
+			if (canMove)
+			{
+				Movement();
+				Skills();
+			}
+		}
+		
+		else
+		{
+			navmesh.enabled = false;
+		}
 		if (isLeader)
 		{
 			navmesh.enabled = false;
@@ -292,7 +292,7 @@ public class Movements : MonoBehaviour
 		if ( regenCounter > 5 )
 		{
 			if(dead == false)
-			Regen();
+				Regen();
 		}
 		
 		
@@ -470,7 +470,7 @@ public class Movements : MonoBehaviour
 						
 					}
 				}
-                if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetButtonDown("Skill 2")) ///skill 2
+				if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetButtonDown("Skill 2")) ///skill 2
 				{
 					ManaCost = 75;
 					if(Mana >= ManaCost && isSkillCooldown2 == false)
@@ -484,7 +484,7 @@ public class Movements : MonoBehaviour
 						Mana -= ManaCost;
 					}
 				}
-                if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetButtonDown("Skill 3")) ///skill 3
+				if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetButtonDown("Skill 3")) ///skill 3
 				{
 					ManaCost = 120;
 					if(Mana >= ManaCost && isSkillCooldown3 == false)
@@ -539,7 +539,7 @@ public class Movements : MonoBehaviour
 						Mana -= ManaCost;
 					}
 				}
-                if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetButtonDown("Skill 2")) ///skill 2
+				if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetButtonDown("Skill 2")) ///skill 2
 				{
 					ManaCost = 30;
 					if(Mana >= ManaCost && isSkillCooldown2 == false)
@@ -553,7 +553,7 @@ public class Movements : MonoBehaviour
 						Mana -= ManaCost;
 					}
 				}
-                if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetButtonDown("Skill 3")) ///skill 3
+				if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetButtonDown("Skill 3")) ///skill 3
 				{
 					
 					ManaCost = 105;
@@ -671,7 +671,7 @@ public class Movements : MonoBehaviour
 					}
 					
 				}
-                if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetButtonDown("Skill 2")) ///skill 2
+				if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetButtonDown("Skill 2")) ///skill 2
 				{
 					ManaCost = 95;
 					if(Mana >= ManaCost && isSkillCooldown2 == false)
@@ -681,13 +681,14 @@ public class Movements : MonoBehaviour
 						
 						Instantiate(Mage_OutburstParticle, Mage_Pos, Quaternion.Euler(0.0f, 0.0f, 0.0f));
 						//  Mage_OutburstParticle.GetComponent<ParticleSystem>().Play();
-						SkillAttack(this.transform.position, 5, 8);
+						StartCoroutine(mageSkill2Cast(1.5f));
+						//SkillAttack(this.transform.position, 5, 8);
 						animator.SetTrigger("Skill 2");
 						Mage_OutburstActive = true;
 						Mana -= ManaCost;
 					}
 				}
-                if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetButtonDown("Skill 3")) ///skill 3
+				if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetButtonDown("Skill 3")) ///skill 3
 				{
 					ManaCost = 140;
 					if(Mana >= ManaCost && isSkillCooldown3 == false)
@@ -700,7 +701,7 @@ public class Movements : MonoBehaviour
 						//SkillAttack(this.transform.position, 0.9f, 9);
 						animator.SetTrigger("Skill 3");
 						Mage_AlleviateHealActive = true;
-
+						
 						Mana -= ManaCost;
 					}
 				}
@@ -731,7 +732,12 @@ public class Movements : MonoBehaviour
 		#endregion
 		
 		else { }
-		
+	}
+	
+	IEnumerator mageSkill2Cast(float delay)
+	{
+		yield return new WaitForSeconds (delay);
+		SkillAttack(this.transform.position, 5, 8);
 	}
 	
 	IEnumerator mageNormalAttack(float delay)
@@ -758,9 +764,7 @@ public class Movements : MonoBehaviour
 		InflictDamage (100, this.transform.position, 0.9f);
 		isAttacking = false;
 	}
-	
-	
-	
+
 	IEnumerator knightSkill3AttackTime(float delay)
 	{
 		isAttacking = true;
@@ -1178,7 +1182,7 @@ public class Movements : MonoBehaviour
 	public float regenhp;
 	public float regenmana;
 	
-	 public GameObject KnightO, FighterO, MageO;
+	public GameObject KnightO, FighterO, MageO;
 	
 	
 	void CharType()
@@ -1378,21 +1382,21 @@ public class Movements : MonoBehaviour
 	void MageHeal()
 	{
 		if (dead == false) {
-						if ((KnightO.GetComponent<Movements> ().HP + SkillDamage (9)) < KnightO.GetComponent<Movements> ().maxHp) 
-								KnightO.GetComponent<Movements> ().HP += SkillDamage (9);
-						else 
-								KnightO.GetComponent<Movements> ().HP = KnightO.GetComponent<Movements> ().maxHp;
-		
-						if ((FighterO.GetComponent<Movements> ().HP + SkillDamage (9)) < FighterO.GetComponent<Movements> ().maxHp) 
-								FighterO.GetComponent<Movements> ().HP += SkillDamage (9);
-						else 
-								FighterO.GetComponent<Movements> ().HP = FighterO.GetComponent<Movements> ().maxHp;
-		
-						if ((MageO.GetComponent<Movements> ().HP + SkillDamage (9)) < MageO.GetComponent<Movements> ().maxHp) 
-								MageO.GetComponent<Movements> ().HP += SkillDamage (9);
-						else 
-								MageO.GetComponent<Movements> ().HP = MageO.GetComponent<Movements> ().maxHp;
-				}
+			if ((KnightO.GetComponent<Movements> ().HP + SkillDamage (9)) < KnightO.GetComponent<Movements> ().maxHp) 
+				KnightO.GetComponent<Movements> ().HP += SkillDamage (9);
+			else 
+				KnightO.GetComponent<Movements> ().HP = KnightO.GetComponent<Movements> ().maxHp;
+			
+			if ((FighterO.GetComponent<Movements> ().HP + SkillDamage (9)) < FighterO.GetComponent<Movements> ().maxHp) 
+				FighterO.GetComponent<Movements> ().HP += SkillDamage (9);
+			else 
+				FighterO.GetComponent<Movements> ().HP = FighterO.GetComponent<Movements> ().maxHp;
+			
+			if ((MageO.GetComponent<Movements> ().HP + SkillDamage (9)) < MageO.GetComponent<Movements> ().maxHp) 
+				MageO.GetComponent<Movements> ().HP += SkillDamage (9);
+			else 
+				MageO.GetComponent<Movements> ().HP = MageO.GetComponent<Movements> ().maxHp;
+		}
 	}
 	
 	void increaseBaseDmg()
