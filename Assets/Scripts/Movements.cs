@@ -102,7 +102,7 @@ public class Movements : MonoBehaviour
 	public bool applystat = false;
 	
 	public AudioClip Mage_IdleFx;
-	
+	int randomIndex = Random.Range(0, 10);
 	#endregion
 	
 	#region Skill Set Variables for Hunter
@@ -178,7 +178,10 @@ public class Movements : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		//		Debug.Log(skillPoints);
+			Debug.Log(randomIndex);
+
+
+		randomIndex = Random.Range(0, 100);
 		statenable = GameObject.Find ("Exp").GetComponent<Experience> ().isLevelup; 
 		
 		//enemyHealthObject.SetActive(false);	
@@ -402,7 +405,7 @@ public class Movements : MonoBehaviour
 			
 			if (dist >= 10.0f)
 			{
-				navmesh.stoppingDistance = 5.0f;
+				//navmesh.stoppingDistance = 5.0f;
 				if(dead == false)
 					navmesh.SetDestination(characterManager.selectedLeader.transform.position);
 			}
@@ -984,52 +987,59 @@ public class Movements : MonoBehaviour
 	
 	void SearchForEnemies()
 	{
+
+
 		GameObject newTarget = null;
+
+
+
+
 		Collider[] col = Physics.OverlapSphere(transform.position, 5.0f);
 		foreach (Collider collide in col)
 		{
 			if(collide.gameObject.tag == "Enemy")
 			{
+
 				newTarget = collide.gameObject;
-				
-				if(this.gameObject.name == "Mage" && isAttacking == false)
+				if(this.gameObject.name == "Mage" && isAttacking == false && randomIndex < 50)
 				{
 					this.transform.LookAt(collide.transform);
 					animator.SetTrigger("Attack");
-					StartCoroutine(delayedRaycast(3.5f));
-					navmesh.stoppingDistance = 2.0f;
+					StartCoroutine(delayedRaycast(0.9f));
 				}
 				
 			}
 		}
 		
-		if (newTarget != null)
-		{
-			enemyTarget = newTarget.gameObject;
-			navmesh.stoppingDistance = 2.0f;
-			navmesh.SetDestination(enemyTarget.transform.position);
-		}
-		
-		
-		
+
+	
 		//AI attack
 		Collider[] col2 = Physics.OverlapSphere(transform.position, 2.0f);
 		foreach (Collider collide in col2)
 		{
 			if(collide.gameObject.tag == "Enemy")
 			{
-				if(this.gameObject.name != "Mage" && isAttacking == false)
+				if(this.gameObject.name != "Mage" && isAttacking == false && randomIndex > 50)
 				{
+					//navmesh.acceleration = 0;
 					this.transform.LookAt(collide.transform);
 					animator.SetTrigger("Attack");
 					StartCoroutine(playerAttackTime(0.5f));
 				}
+
 				
 				
 				//InflictDamage(100,this.transform.position, 0.9f);
 			}
 		}
-		
+
+		if (newTarget != null)
+		{
+			enemyTarget = newTarget.gameObject;
+			navmesh.stoppingDistance = 1.5f;
+			navmesh.SetDestination(enemyTarget.transform.position);
+			
+		}
 		
 		
 	}

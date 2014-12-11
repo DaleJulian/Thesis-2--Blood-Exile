@@ -18,7 +18,12 @@ public class CameraFollow : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        intro = true;
+		if (Application.loadedLevelName == "Level 2")
+		{
+			intro = false;
+		}
+		else intro = true;
+       
     }
 
    
