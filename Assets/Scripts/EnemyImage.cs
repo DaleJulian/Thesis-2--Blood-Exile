@@ -68,6 +68,31 @@ public class EnemyImage : MonoBehaviour {
 			EnemyTexture = Resources.Load<Texture>("mashroompoison");
 			break;
 
+		case "skeletonSword": //Poison
+			EnemyTexture = Resources.Load<Texture>("skeletonsword");
+			break;
+
+		case "skeletonArcher": //Poison
+			EnemyTexture = Resources.Load<Texture>("skeletonarcher");
+			break;
+
+			
+		case "SpikeMushroom(Clone)": //Spikes
+			EnemyTexture = Resources.Load<Texture>("mashroomspike");
+			break;
+			
+		case "PurpleMushroom(Clone)": //Poison
+			EnemyTexture = Resources.Load<Texture>("mashroompoison");
+			break;
+			
+		case "skeletonSword(Clone)": //Poison
+			EnemyTexture = Resources.Load<Texture>("skeletonsword");
+			break;
+			
+		case "skeletonArcher(Clone)": //Poison
+			EnemyTexture = Resources.Load<Texture>("skeletonarcher");
+			break;
+
 		case "Empty":
 			EnemyTexture = Resources.Load<Texture>("Question-mark");
 			break;

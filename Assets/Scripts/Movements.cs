@@ -178,7 +178,7 @@ public class Movements : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-			Debug.Log(randomIndex);
+//			Debug.Log(randomIndex);
 
 
 		randomIndex = Random.Range(0, 100);
