@@ -9,10 +9,21 @@ public class MainMenuSelector : MonoBehaviour {
     int selectedChoice;
     Vector3 refVel;
 
+    [SerializeField]
+    private AudioClip selectSound;
+
+    [SerializeField]
+    private AudioClip mainMenuSound;
+
+    bool playMainMenuSound;
+
 	// Use this for initialization
 	void Start () {
-	
+
+        playMainMenuSound = true;
+        if (playMainMenuSound) audio.PlayOneShot(mainMenuSound);
 	}
+
 
     void ChangeSelections()
     {
@@ -63,6 +74,14 @@ public class MainMenuSelector : MonoBehaviour {
 
     float width;
     float refVelf;
+
+    IEnumerator LoadSceneWithDelay(float delay, int level)
+    {
+        audio.Pause();
+        audio.PlayOneShot(selectSound);
+        yield return new WaitForSeconds(delay);
+        Application.LoadLevel(level);
+    }
 	// Update is called once per frame
 	void Update () {
 
@@ -80,10 +99,10 @@ public class MainMenuSelector : MonoBehaviour {
             switch (selectedChoice)
             {
                 case 0:
-                    Application.LoadLevel(1);
+                    StartCoroutine(LoadSceneWithDelay(1, 1));
                     break;
                 case 1:
-                    Application.LoadLevel(2);
+                    StartCoroutine(LoadSceneWithDelay(1, 3));
                     break;
                 case 2:
                     Application.Quit();

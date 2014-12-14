@@ -241,7 +241,7 @@ public class MudGolem3 : MonoBehaviour {
 			Instantiate(Golem_ParticleDeath, MudGolemPos, Quaternion.Euler(0.0f, 0.0f, 0.0f));
 			exp.GetComponent<Experience>().getExperience(50);
 
-
+            CharacterManager.instance.mudGolemsKilled++;
 			Destroy(this.gameObject);
 			
 		}

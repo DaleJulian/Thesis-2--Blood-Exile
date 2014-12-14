@@ -25,9 +25,9 @@ public class QuestCanvas : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Q)) {
 			Pause();}
-
-        if (Input.GetButtonDown("Open Inventory"))
-            canvas.enabled = !canvas.enabled;
+        if (CharacterManager.instance.canSwitch)
+            if (Input.GetButtonDown("Open Inventory") || Input.GetKeyDown(KeyCode.Return))
+                canvas.enabled = !canvas.enabled;
         
 	}
 

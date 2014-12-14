@@ -14,7 +14,7 @@ public class CharacterManager : MonoBehaviour
             if (_instance == null)
             {
                 _instance = GameObject.FindObjectOfType<CharacterManager>();
-                DontDestroyOnLoad(_instance.gameObject);
+                //DontDestroyOnLoad(_instance.gameObject);
             }
             return _instance;
         }
@@ -25,7 +25,7 @@ public class CharacterManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
         else
         {
@@ -90,11 +90,22 @@ public class CharacterManager : MonoBehaviour
 
     }
 
+    private IEnumerator winCondition()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Application.LoadLevel(4);
+    }
+
+   
+    public int mudGolemsKilled;
+
 
     // Update is called once per frame
     void Update()
     {
-
+        if (myChars.Count <= 0)
+            allDead = true;
+        if (allDead) Application.LoadLevel(2);
         if (Input.GetKeyDown(KeyCode.Keypad0))
         {
             Application.LoadLevel(0);
@@ -118,9 +129,7 @@ public class CharacterManager : MonoBehaviour
 
         indicator.transform.position = selectedLeader.transform.position - new Vector3(0, 1.5f, 0) ;
 
-        if (myChars.Count == 0)
-            allDead = true;
-        if (allDead) Debug.Log("GG");
+        
 
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {
@@ -130,7 +139,11 @@ public class CharacterManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)) //revive last person who died
         {
             ReturnToCharacterPool();
+        }
 
+        if (mudGolemsKilled >= 4.0f)
+        {
+            StartCoroutine(winCondition());
         }
     }
 }

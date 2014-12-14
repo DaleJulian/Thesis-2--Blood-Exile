@@ -1,0 +1,168 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll"
+-define:UNITY_4_6_0
+-define:UNITY_4_6
+-define:UNITY_64
+-define:UNITY_STANDALONE_WIN
+-define:ENABLE_MICROPHONE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_NEW_HIERARCHY 
+-define:ENABLE_AUDIO_FMOD
+-define:UNITY_STANDALONE
+-define:ENABLE_MONO
+-define:ENABLE_TERRAIN
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GENERICS
+-define:INCLUDE_WP8SUPPORT
+-define:ENABLE_MOVIES
+-define:ENABLE_WWW
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_4_6_FEATURES
+-define:INCLUDE_WP_BLUE_SUPPORT
+-define:ENABLE_WEBCAM
+-define:INCLUDE_METROSUPPORT
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_NETWORK
+-define:ENABLE_PHYSICS
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_SHADOWS
+-define:ENABLE_AUDIO
+-define:ENABLE_NAVMESH_CARVING
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+"Assets/Free Assets Download/52SpecialEffectPack/LegacyEffectEditor/csLegacyEffectChanger.cs"
+"Assets/Free Assets Download/52SpecialEffectPack/LegacyEffectEditor/csLegacyEffectEditor.cs"
+"Assets/Free Assets Download/Elementals/Scripts/OrbitCamera.cs"
+"Assets/Free Assets Download/Elementals/Scripts/TestParticles.cs"
+"Assets/Free Assets Download/Mecanim Warrior Anim Free/Script/PlayGUI.cs"
+"Assets/Free Assets Download/MoveForward.cs"
+"Assets/Free Assets Download/XWeaponTrail/Scripts/Spline.cs"
+"Assets/Free Assets Download/XWeaponTrail/Scripts/SplineControlPoint.cs"
+"Assets/Free Assets Download/XWeaponTrail/Scripts/VertexPool.cs"
+"Assets/Free Assets Download/XWeaponTrail/Scripts/XWeaponTrail.cs"
+"Assets/Free Assets Download/XWeaponTrail/Scripts/XWeaponTrailDemo.cs"
+"Assets/Inventory System/Item.cs"
+"Assets/Inventory System/ItemDatabase.cs"
+"Assets/Inventory System/Manager.cs"
+"Assets/Inventory System/Pages.cs"
+"Assets/Inventory System/Slots.cs"
+"Assets/Inventory System/TextScripts.cs"
+Assets/Scripts/CameraFollow.cs
+Assets/Scripts/CharacterManager.cs
+Assets/Scripts/Chest_Open.cs
+Assets/Scripts/CircularMovement.cs
+Assets/Scripts/ControlsCanvas.cs
+Assets/Scripts/DoneSceneFadeInOut.cs
+Assets/Scripts/Dwarf_Earth.cs
+Assets/Scripts/Dwarf_Fire.cs
+Assets/Scripts/Dwarf_Water.cs
+Assets/Scripts/EnemyChar.cs
+Assets/Scripts/EnemyImage.cs
+Assets/Scripts/EnemyManager.cs
+Assets/Scripts/EnemyMovement.cs
+Assets/Scripts/Exp.cs
+Assets/Scripts/Experience.cs
+Assets/Scripts/FallOff.cs
+Assets/Scripts/FighterSkill1.cs
+Assets/Scripts/FighterSkill2.cs
+Assets/Scripts/Fighter_Skill3ParticleDestroy.cs
+Assets/Scripts/Fighter_Skill3_Particle_Destroyer.cs
+Assets/Scripts/Fighter_skill2ParticleDestroyer.cs
+Assets/Scripts/GameOverScript.cs
+Assets/Scripts/GolemParticleDestroyer.cs
+Assets/Scripts/KnightSkill2.cs
+Assets/Scripts/KnightSkill3.cs
+Assets/Scripts/Knight_skill2ParticleDestroyer.cs
+Assets/Scripts/LeaderImage.cs
+Assets/Scripts/Level1BossBattleStage.cs
+Assets/Scripts/MageNormalAttack.cs
+Assets/Scripts/MageSkill1.cs
+Assets/Scripts/Mage_HealPartyParticleDestroyer.cs
+Assets/Scripts/MainMenuSelector.cs
+Assets/Scripts/Movements.cs
+Assets/Scripts/MudGolem1.cs
+Assets/Scripts/MudGolem2.cs
+Assets/Scripts/MudGolem3.cs
+Assets/Scripts/MudGolemSpawner.cs
+Assets/Scripts/Mushroom.cs
+Assets/Scripts/Mushroom2.cs
+Assets/Scripts/PathBoss.cs
+Assets/Scripts/Platform.cs
+Assets/Scripts/PlayerHealth.cs
+Assets/Scripts/PlayerMana.cs
+Assets/Scripts/QuestCanvas.cs
+Assets/Scripts/Spawner.cs
+Assets/Scripts/StatCanvas.cs
+Assets/Scripts/StatManager.cs
+Assets/Scripts/Torch.cs
+Assets/Scripts/TorchManager.cs
+Assets/Scripts/Tutorial/YouWin.cs
+Assets/Scripts/Tutorial/credits.cs
+Assets/Scripts/Tutorial_DummyScript.cs
+"Assets/Scripts/UI Manager.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/P2T.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/DelaunayTriangle.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/AdvancingFront.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/AdvancingFrontNode.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/DTSweep.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/DTSweepBasin.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/DTSweepConstraint.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/DTSweepContext.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/DTSweepDebugContext.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/DTSweepEdgeEvent.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/DTSweepPointComparator.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Delaunay/Sweep/PointOnEdgeException.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/ITriangulatable.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Orientation.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Polygon/Contour.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Polygon/Polygon.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Polygon/PolygonPoint.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Polygon/PolygonSet.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Polygon/PolygonUtil.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Sets/ConstrainedPointSet.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Sets/PointSet.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/TriangulationAlgorithm.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/TriangulationConstraint.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/TriangulationContext.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/TriangulationDebugContext.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/TriangulationMode.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/TriangulationPoint.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Util/PointGenerator.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Util/PolygonGenerator.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Triangulation/Util/TriangulationUtil.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Utility/FixedArray3.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Utility/FixedBitArray3.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Utility/MathUtil.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Utility/Point2D.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Utility/Point2DList.cs"
+"Assets/Ultimate Game Tools/Fracturing/CDT/Utility/Rect2D.cs"
+"Assets/Ultimate Game Tools/Fracturing/Sample Scene Data/Scripts/LogicArcsAndColumns.cs"
+"Assets/Ultimate Game Tools/Fracturing/Sample Scene Data/Scripts/LogicCollidingSphere.cs"
+"Assets/Ultimate Game Tools/Fracturing/Sample Scene Data/Scripts/LogicCompoundObject.cs"
+"Assets/Ultimate Game Tools/Fracturing/Sample Scene Data/Scripts/LogicExplodingFloor.cs"
+"Assets/Ultimate Game Tools/Fracturing/Sample Scene Data/Scripts/LogicExplodingGoblin.cs"
+"Assets/Ultimate Game Tools/Fracturing/Sample Scene Data/Scripts/LogicGlobalFracturing.cs"
+"Assets/Ultimate Game Tools/Fracturing/Sample Scene Data/Scripts/UltimateFracturingFPS.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/ConcaveColliderInterface.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/ExplosionSource.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/Fracture.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/FracturedChunk.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/FracturedObject.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/FracturingUtilDieTimer.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/MeshData.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/SpaceTree.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/Split.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/SupportPlane.cs"
+"Assets/Ultimate Game Tools/Fracturing/Scripts/Triangulate.cs"
+"Assets/Ultimate Game Tools/MeshCombiner/Scripts/CombinedMesh.cs"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll"

@@ -47,11 +47,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Free Assets Download\XWeaponTrail\Editor\XWeaponTrailEditor.cs" />
+     <Compile Include="Assets\Ultimate Game Tools\Fracturing\Editor\ExplosionSourceEditor.cs" />
+     <Compile Include="Assets\Ultimate Game Tools\Fracturing\Editor\FracturedChunkEditor.cs" />
+     <Compile Include="Assets\Ultimate Game Tools\Fracturing\Editor\FracturedObjectEditor.cs" />
+     <Compile Include="Assets\Ultimate Game Tools\MeshCombiner\Editor\CombinedMeshEditor.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Free Assets Download\00_KY_FX pack2\prefab\01_shot\00_ReadMe.txt" />
      <None Include="Assets\Level2 assets\enemies\skeletonArcher.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Free Assets Download\00_KY_FX pack2\ReadMe.txt" />
+     <None Include="Assets\Ultimate Game Tools\Fracturing\!Readme - v1.11.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Free Assets Download\KY_magicEffectsFree\ReadMe.txt" />
      <None Include="Assets\Free Assets Download\XWeaponTrail\readme_english.txt" />
@@ -63,6 +68,7 @@
      <None Include="Assets\Free Assets Download\XWeaponTrail\readme_chinese.txt" />
      <None Include="Assets\Level2 assets\enemies\skeletonSword.txt" />
      <None Include="Assets\Treasurechest\Read me\readme.txt" />
+     <None Include="Assets\Ultimate Game Tools\MeshCombiner\!Readme - v1.02.txt" />
      <None Include="Assets\Free Assets Download\XWeaponTrail\Shader\xft_displacement_screen.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

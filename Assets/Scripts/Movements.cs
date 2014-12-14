@@ -102,7 +102,7 @@ public class Movements : MonoBehaviour
 	public bool applystat = false;
 	
 	public AudioClip Mage_IdleFx;
-	int randomIndex = Random.Range(0, 10);
+    int randomIndex;
 	#endregion
 	
 	#region Skill Set Variables for Hunter
@@ -124,7 +124,9 @@ public class Movements : MonoBehaviour
 		enemyHealthObject = enemyHPSlider.gameObject;
 		originalSpeed = speed;
 		BSUi = GameObject.Find("BloodSurge");
-	}
+        randomIndex = Random.Range(0, 10);
+        Time.timeScale = 1.0f;
+    }
 	
 	public Transform respawnPoint;
 	
@@ -172,7 +174,8 @@ public class Movements : MonoBehaviour
 		#endregion 
 		
 		WandPos = GameObject.Find("Mage_StaffOrigin").transform;
-	}
+        randomIndex = Random.Range(0, 10);
+    }
 	
 	public bool dead = false;
 	// Update is called once per frame
@@ -181,7 +184,7 @@ public class Movements : MonoBehaviour
 //			Debug.Log(randomIndex);
 
 
-		randomIndex = Random.Range(0, 100);
+		//randomIndex = Random.Range(0, 100);
 		statenable = GameObject.Find ("Exp").GetComponent<Experience> ().isLevelup; 
 		
 		//enemyHealthObject.SetActive(false);	
@@ -583,7 +586,7 @@ public class Movements : MonoBehaviour
 			if (isLeader)
 			{
 				#region Mage Particle Condition
-				audio.PlayOneShot(Mage_IdleFx, 1.0f);
+				
 				//Normal Attack
 				if (Mage_NormalAttackActive == true)
 				{
@@ -694,6 +697,7 @@ public class Movements : MonoBehaviour
 				if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetButtonDown("Skill 3")) ///skill 3
 				{
 					ManaCost = 140;
+                    Debug.Log("Skill initialized.");
 					if(Mana >= ManaCost && isSkillCooldown3 == false)
 					{
 						StartCoroutine(skillCooldown(10,3));
@@ -706,7 +710,8 @@ public class Movements : MonoBehaviour
 						Mage_AlleviateHealActive = true;
 						
 						Mana -= ManaCost;
-					}
+                    }
+                    Debug.Log("Skill finished.");
 				}
 			}
 		}
@@ -757,6 +762,7 @@ public class Movements : MonoBehaviour
 		GameObject burst = (GameObject)Instantiate(Mage_NormalAttackParticle, WandPos.transform.position, transform.rotation);
 		//burst.rigidbody.AddForce(transform.forward * 600);
 		Destroy(burst, 3.0f);
+        randomIndex = Random.Range(0, 100);
 		isAttacking = false;
 	}	
 	
@@ -988,12 +994,7 @@ public class Movements : MonoBehaviour
 	void SearchForEnemies()
 	{
 
-
 		GameObject newTarget = null;
-
-
-
-
 		Collider[] col = Physics.OverlapSphere(transform.position, 5.0f);
 		foreach (Collider collide in col)
 		{
@@ -1001,7 +1002,7 @@ public class Movements : MonoBehaviour
 			{
 
 				newTarget = collide.gameObject;
-				if(this.gameObject.name == "Mage" && isAttacking == false && randomIndex < 50)
+				if(this.gameObject.name == "Mage" && isAttacking == false)
 				{
 					this.transform.LookAt(collide.transform);
 					animator.SetTrigger("Attack");
@@ -1019,7 +1020,7 @@ public class Movements : MonoBehaviour
 		{
 			if(collide.gameObject.tag == "Enemy")
 			{
-				if(this.gameObject.name != "Mage" && isAttacking == false && randomIndex > 50)
+				if(this.gameObject.name != "Mage" && isAttacking == false)
 				{
 					//navmesh.acceleration = 0;
 					this.transform.LookAt(collide.transform);

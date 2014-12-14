@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CameraFollow : MonoBehaviour
@@ -15,6 +16,14 @@ public class CameraFollow : MonoBehaviour
     public int currentTarget;
     public float cutsceneTimer;
     Vector3 refVel;
+
+    public Text dialog;
+    public Text skipInstruction;
+
+    public Text instructions;
+    public Image panel;
+
+
     // Use this for initialization
     void Start()
     {
@@ -26,7 +35,7 @@ public class CameraFollow : MonoBehaviour
        
     }
 
-   
+    
     // Update is called once per frame
     void Update()
     {
@@ -83,7 +92,7 @@ public class CameraFollow : MonoBehaviour
                 CharacterManager.instance.myChars[i].GetComponent<Movements>().canMove = false;
             }
             transform.position = Vector3.SmoothDamp(transform.position, introTargets[currentTarget].transform.position, ref refVel, 1.0f);
-            if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Skill 3"))
+            if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Skill 3") || Input.GetKeyDown(KeyCode.Return))
             {
                 currentTarget++;
                 cutsceneTimer = 0;
@@ -99,6 +108,27 @@ public class CameraFollow : MonoBehaviour
             {
                 intro = false;
             }
+
+            if(Application.loadedLevel == 1)
+                switch (currentTarget)
+                {
+                    case 0:
+                        dialog.text = "Kill the Big Mud Golem.";
+                        break;
+                    case 1:
+                        dialog.text = "Find a way to get to the Boss's platform.";
+                        break;
+                    case 2:
+                    case 3:
+                    case 4:
+                        dialog.text = "Light these torches to reveal the path to the Boss's platform.";
+                        break;
+                    default:
+                        dialog.text = " ";
+                        skipInstruction.text = " ";
+                        panel.enabled = false;
+                        break;
+                }
             
             
         }

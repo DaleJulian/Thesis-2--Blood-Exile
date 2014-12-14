@@ -13,9 +13,9 @@ public class StatCanvas : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		if (Input.GetKeyDown (KeyCode.P) || Input.GetButtonDown("Open Inventory")) {
-			Pause();}
+		if(CharacterManager.instance.canSwitch)
+		    if (Input.GetKeyDown (KeyCode.P) || Input.GetButtonDown("Open Inventory") || Input.GetKeyDown(KeyCode.Return)) {
+			    Pause();}
 	}
 	
 	void Pause()
