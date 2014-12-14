@@ -107,6 +107,7 @@
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMana.cs" />
      <Compile Include="Assets\Scripts\QuestCanvas.cs" />
+     <Compile Include="Assets\Scripts\SkeletonAI.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\StatCanvas.cs" />
      <Compile Include="Assets\Scripts\StatManager.cs" />

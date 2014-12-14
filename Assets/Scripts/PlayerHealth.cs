@@ -45,7 +45,8 @@ public class PlayerHealth : MonoBehaviour
 		SubChar1 = GameObject.Find ("Character image 1").GetComponent<RawImage> ();
 		SubChar2 = GameObject.Find ("Character image 2").GetComponent<RawImage> ();
 		Player = GameObject.Find ("Character Manager").GetComponent<CharacterManager> ().selectedLeader;
-		healthSlider.maxValue = Player.GetComponent<Movements>().maxHp;
+		if(Player != null)
+            healthSlider.maxValue = Player.GetComponent<Movements>().maxHp;
 	}
 	
 	void Update ()

@@ -37,7 +37,8 @@ public class PlayerMana : MonoBehaviour
 	void Start()
 	{
 		Player = GameObject.Find ("Character Manager").GetComponent<CharacterManager> ().selectedLeader;
-		manaSlider.maxValue = Player.GetComponent<Movements> ().Mana;
+        if (Player != null)
+            manaSlider.maxValue = Player.GetComponent<Movements> ().Mana;
 	}
 	
 	void Update ()

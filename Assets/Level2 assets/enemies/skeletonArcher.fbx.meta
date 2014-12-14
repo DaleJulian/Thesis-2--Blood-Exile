@@ -324,7 +324,7 @@ ModelImporter:
     4300000: polySurface2
     7400000: SkeletonArcher_Walk
     7400002: 
-    7400004: SkeletonArcher_Idle
+    7400004: SkeletonArcher_Attack
     9500000: //RootNode
     13700000: polySurface2
   materials:
@@ -688,7 +688,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: SkeletonArcher_Idle
+      name: SkeletonArcher_Attack
       takeName: Take 001
       firstFrame: 1
       lastFrame: 30
