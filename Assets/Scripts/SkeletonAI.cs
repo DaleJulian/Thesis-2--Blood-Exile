@@ -50,12 +50,8 @@ public class SkeletonAI : MonoBehaviour
         randomPos = Random.insideUnitSphere * radius;
         if (SkeletonType == SkeletonAIType.Archer)
         {
-            GameObject arrow = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            arrow.transform.localScale = new Vector3(0.1f, 0.1f, 1);
-            archerArrow = arrow;
-            archerArrow.AddComponent<Rigidbody>();
-            archerArrow.collider.isTrigger = true;
-            archerArrow.tag = "Arrow";
+           
+            
         }
     }
 

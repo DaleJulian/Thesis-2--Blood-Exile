@@ -126,15 +126,11 @@ public class EnemyMovement : MonoBehaviour
 	void Update ()
 	{
 		anim.SetFloat("Speed", direction.sqrMagnitude);
-		//dead = (myHp.HP <= 0) ? true : false;
-		//dead = (myHp.HP <= 0) ? true : false;
+
 		nav.enabled = (dead == false) ? true : false;
 		
 		if (player == null)
-		{
-			//print("Player null");
 			SearchForTarget();
-		}
 		
 		else if(player != null && player.tag == "Player")
 		{

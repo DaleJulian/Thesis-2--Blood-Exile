@@ -176,6 +176,16 @@ public class Movements : MonoBehaviour
 		WandPos = GameObject.Find("Mage_StaffOrigin").transform;
         randomIndex = Random.Range(0, 10);
     }
+
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Arrow"))
+        {
+            Hurt(30.0f);
+            Destroy(col.gameObject);
+        }
+    }
 	
 	public bool dead = false;
 	// Update is called once per frame
