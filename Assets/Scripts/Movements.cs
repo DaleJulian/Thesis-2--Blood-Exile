@@ -12,7 +12,8 @@ public enum CharacterClass
 public class Movements : MonoBehaviour
 {
 	public GameObject enemy;
-	float ManaCost;
+	float ManaCost,ManaCost1, ManaCost2, ManaCost3;
+	
 	public CharacterClass characterClass;
 	public GameObject EnemyImage;
 	public bool isLeader;
@@ -177,7 +178,7 @@ public class Movements : MonoBehaviour
         randomIndex = Random.Range(0, 10);
     }
 
-
+	/*
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Arrow"))
@@ -186,14 +187,15 @@ public class Movements : MonoBehaviour
             Destroy(col.gameObject);
         }
     }
-	
+	*/
+
 	public bool dead = false;
 	// Update is called once per frame
 	void Update()
 	{
 //			Debug.Log(randomIndex);
 
-
+		checkMana ();
 		//randomIndex = Random.Range(0, 100);
 		statenable = GameObject.Find ("Exp").GetComponent<Experience> ().isLevelup; 
 		
@@ -441,7 +443,7 @@ public class Movements : MonoBehaviour
 			}
 		}
 	}
-	
+
 	void Skills()
 	{
 		#region Knight Skills
@@ -473,7 +475,7 @@ public class Movements : MonoBehaviour
 				if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetButtonDown("Skill 1")) ///skill 1
 				{
 					ManaCost = 50;
-					
+
 					if(Mana >= ManaCost && isSkillCooldown1 == false)
 					{
 						StartCoroutine(skillCooldown(1,1));
@@ -482,10 +484,9 @@ public class Movements : MonoBehaviour
 						Knight_bloodSurgeActive = true;
 						Mana -= ManaCost;
 						skillActive = true;
-						
-						
 					}
 				}
+
 				if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetButtonDown("Skill 2")) ///skill 2
 				{
 					ManaCost = 75;
@@ -1166,6 +1167,24 @@ public class Movements : MonoBehaviour
 			}
 		}
 	}
+
+	void checkMana()
+	{
+		if (Mana < ManaCost1)
+			isUsable1 = false;
+		else 
+			isUsable1 = true;
+
+		if (Mana < ManaCost2)
+			isUsable2 = false;
+		else 
+			isUsable2 = true;
+
+		if (Mana < ManaCost3)
+			isUsable3 = false;
+		else 
+			isUsable3 = true;
+	}
 	
 	
 	//------------------------------------------------------------------------------------Damage Calculation-----------------------------------------------------------------------
@@ -1174,7 +1193,9 @@ public class Movements : MonoBehaviour
 	public float magicDmg;
 	public float agi;
 	public float def;
-	
+	public bool isUsable1, isUsable2, isUsable3;
+
+
 	public bool skillActive;
 	public bool isSkillCooldown1 = false, isSkillCooldown2 = false, isSkillCooldown3 = false;
 	
@@ -1220,7 +1241,11 @@ public class Movements : MonoBehaviour
 			agi = 5;
 			
 			currentDmg = baseDmg;
-			
+
+			ManaCost1 = 50;
+			ManaCost2 = 75;
+			ManaCost3 = 120;
+
 			break;
 		}
 			
@@ -1234,7 +1259,10 @@ public class Movements : MonoBehaviour
 			agi = 7;
 			
 			currentDmg = baseDmg;
-			
+
+			ManaCost1 = 85;
+			ManaCost2 = 30;
+			ManaCost3 = 105;
 			break;
 		}
 			
@@ -1248,7 +1276,10 @@ public class Movements : MonoBehaviour
 			agi = 6;
 			
 			currentDmg = baseDmg;
-			
+
+			ManaCost1 = 75;
+			ManaCost2 = 95;
+			ManaCost3 = 140;
 			break;
 		}
 			

@@ -44,195 +44,126 @@ public class EnemyChar : MonoBehaviour
 
     void EnemyType()
     {
-        //Class
-        switch (type)
-        {
-            case 1: //Mushroom Posion
-                {
-                    maxHp = 10;
-                    HP = 10;
-                    def = 1;
-                    agi = 0;
+				//Class
+				switch (type) {
+				case 1: //Mushroom Posion
+						{
+								maxHp = 10;
+								HP = 10;
+								def = 1;
+								agi = 0;
+								break;
+						}
 
-                    break;
-                }
+				case 2: //Mushroom Spikes
+						{
+								maxHp = 10;
+								HP = 10;
+								def = 1;
+								agi = 0;
+								magicDmg = 0;
+								break;
+						}
 
-            case 2: //Mushroom Spikes
-                {
-                    maxHp = 10;
-                    HP = 10;
-                    def = 1;
-                    agi = 0;
-                    magicDmg = 0;
-                    break;
-                }
+				case 3: //Taong Lupa
+						{
+								maxHp = 15;
+								HP = 15;
+								baseDmg = 100;
+								def = 1;
+								agi = 0;
+								magicDmg = 0;
 
-            case 3: //Taong Lupa
-                {
-                    maxHp = 15;
-                    HP = 15;
-                    baseDmg = 100;
-                    def = 1;
-                    agi = 0;
-                    magicDmg = 0;
+								break;
+						}
 
-                    break;
-                }
+				case 4: //Rock
+						{
+								maxHp = 10;
+								HP = 10;
+								baseDmg = 255;
+								def = 3;
+								agi = 5;
+								magicDmg = 0;
 
-            case 4: //Rock
-                {
-                    maxHp = 10;
-                    HP = 10;
-                    baseDmg = 255;
-                    def = 3;
-                    agi = 5;
-                    magicDmg = 0;
+								break;
+						}
 
-                    break;
-                }
+				case 5: //Ibon
+						{
+								maxHp = 10;
+								HP = 10;
+								baseDmg = 70;
+								agi = 10;
+								magicDmg = 0;
 
-            case 5: //Ibon
-                {
-                    maxHp = 10;
-                    HP = 10;
-                    baseDmg = 70;
-                    agi = 10;
-                    magicDmg = 0;
+								break;
+						}
 
-                    break;
-                }
+				case 6: //fireDwarf
+						{
+								maxHp = 30;
+								HP = 30;
+								baseDmg = 70;
+								def = 8;
+								agi = 10;
+								magicDmg = 0;
 
-            case 6: //fireDwarf
-                {
-                    maxHp = 30;
-                    HP = 30;
-                    baseDmg = 70;
-                    def = 8;
-                    agi = 10;
-                    magicDmg = 0;
+								break;
+						}
 
-                    break;
-                }
+				case 7: //earthDwarf
+						{
+								maxHp = 34;
+								HP = 34;
+								baseDmg = 40;
+								def = 15;
+								agi = 10;
+								magicDmg = 20;
 
-            case 7: //earthDwarf
-                {
-                    maxHp = 34;
-                    HP = 34;
-                    baseDmg = 40;
-                    def = 15;
-                    agi = 10;
-                    magicDmg = 20;
+								break;
+						}
 
-                    break;
-                }
+				case 8: //bossDwarf
+						{
+								maxHp = 60;
+								HP = 60;
+								baseDmg = 100;
+								def = 20;
+								agi = 100;
+								magicDmg = 40;
 
-            case 8: //bossDwarf
-                {
-                    maxHp = 60;
-                    HP = 60;
-                    baseDmg = 100;
-                    def = 20;
-                    agi = 100;
-                    magicDmg = 40;
+								break;
+						}
+				case 9: //SkeletonArcher
+						{
+								maxHp = 20;
+								HP = 20;
+								baseDmg = 35.0f;
+								def = 4.0f;
+								agi = 1.0f;
+								magicDmg = 25.0f;
+								break;
+						}
 
-                    break;
-                }
-            case 9: //SkeletonArcher
-                maxHp = 8;
-                HP = 8;
-                baseDmg = 30.0f;
-                def = 10.0f;
-                agi = 30.0f;
-                magicDmg = 15.0f;
-                break;
-        }
-    }
+				case 10: //SkeletonSwordsman
+						{
+								maxHp = 35;
+								HP = 35;
+								baseDmg = 15.0f;
+								def = 8.0f;
+								agi = 1.0f;
+								magicDmg = 5.0f;
+								break;
+						}
+				}
+		}
 
-    public void SkillDamage(int skilltype)
-    {
-        int skill = skilltype;
-        switch (skill)
-        {
-            //Knight Skills
-            case 1: //Blood Surge
-                {
-                    currentDmg = baseDmg;
-                    baseDmg = currentDmg + (baseDmg * 0.20f);
-                    break;
-                }
-            case 2: //Cyclone Pass
-                {
-                    skillDmg = 70 + (agi * 0.25f);
-                    break;
-                }
-            case 3: //Defile Slash
-                {
-                    skillDmg = 150 + (magicDmg * 0.30f) + (agi * 0.50f);
-                    break;
-                }
-
-            //Fist Skills
-            case 4: //Alacrity Spritz
-                {
-                    skillDmg = 50 + (agi * 0.28f);
-                    break;
-                }
-            case 5: //Dynamic Jab
-                {
-                    skillDmg = 65 + (magicDmg * 0.15f);
-                    break;
-                }
-            case 6: //Myriad Strike
-                {
-                    skillDmg = 105 + (magicDmg * 0.40f) + (agi * 0.45f);
-                    break;
-                }
-
-            //Mage Skills
-            case 7: //Gravel Swain
-                {
-                    //Summon Golem
-                    break;
-                }
-            case 8: //Outburst
-                {
-                    skillDmg = 80 + (magicDmg * 0.20f) + (agi * 0.09f);
-                    break;
-                }
-            case 9: //Alleviate Heal
-                {
-                    //Heal 		
-                    break;
-                }
-
-            //Hunter Skills
-            case 10: //Daze Arrow
-                {
-                    skillDmg = 30 + (magicDmg * 0.20f);
-                    break;
-                }
-            case 11: //Shaft
-                {
-                    skillDmg = 60 + (agi * 0.35f);
-                    break;
-                }
-            case 12: //Rain Shower
-                {
-                    skillDmg = 90 + (magicDmg * 0.35f) + (agi * 0.55f);
-                    break;
-                }
-
-        }
-
-        dmgSkill = ((level + 2) * magicDmg + skillDmg) / 4;
-
-        //Debug.Log ("Skill Damage " + dmgSkill);
-    }
+   
 
     public float NormalDamage()
     {
         dmgAtk = ((level + 2) * 2 + baseDmg) / 4;
-
         return dmgAtk;
         //Debug.Log ("Normal Damage : " + dmgAtk);
     }
@@ -306,6 +237,12 @@ public class EnemyChar : MonoBehaviour
                     case 4:
                         expbar.GetComponent<Experience>().getExperience(50);
                         break;
+					case 9:
+						expbar.GetComponent<Experience>().getExperience(50);
+						break;
+					case 10:
+						expbar.GetComponent<Experience>().getExperience(50);
+						break;
                 }
                 Destroy(this.gameObject);
             }
